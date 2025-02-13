@@ -1,31 +1,33 @@
-*{
+* {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
-body{
+body {
     font-family: 'arial';
+    background-color:  radial-gradient(#EAD7C5, #B68D40);
+    min-height: 100vh;
 }
 
-.logo{
+.logo {
     font-family: 'Fredoka', sans-serif;
-    color: 	#8B4513;
+    color: #8B4513;
 }
 
-.logo span{
+.logo span {
     font-family: 'Fredoka', sans-serif;
     color: #F4A460;
 }
 
-.header-inner-content{
+.container-header {
     max-width: 1300px;
     margin-left: auto;
     margin-right: auto;
-
 }
 
-.navbar{
+/* ELEMENTOS DO NAVBAR */
+.navbar {
     background-color: #a08c7a;
     padding: 1rem;
     position: sticky;
@@ -33,14 +35,14 @@ body{
     z-index: 99;
 }
 
-.navbar>div{
+.navbar > div {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: relative;
 }
 
-
-nav ul{
+nav ul {
     font-family: 'Poppins', sans-serif;
     font-weight: 525;
     display: flex;
@@ -48,61 +50,70 @@ nav ul{
     align-items: center;
 }
 
-nav ul li{
+nav ul li {
     color: #141414;
     margin-right: 2rem;
     cursor: pointer;
-}    
-
-.nav-icons{
-    display: flex;
-    align-items: center; 
 }
 
-.nav-icons img{
+.icone-nav {
+    display: flex;
+    align-items: center;
+}
+
+.icone-nav img {
     width: 30px;
     cursor: pointer;
 }
 
-nav ul li:hover{
-    transform:translateY(-5px);
+nav ul li:hover {
+    transform: translateY(-5px);
     transition: all 0.5s;
-}    
+}
 
-.menu-icon{
+/* Menu hamburguer */
+.checkbox-menu {
     display: none;
 }
 
-header{
-    background-image: radial-gradient(#EAD7C5, #B68D40);
+.icone-menu {
+    display: none;
+    width: 35px;
+    cursor: pointer;
 }
 
-.header-bottom-side{
+/* ELEMENTOS DO HEADER */
+header {
+    background-image: radial-gradient(#EAD7C5, #B68D40);
+    min-height: 100vh;
+}
+
+.container-inferior {
     display: flex;
     align-items: center;
     justify-self: center;
     padding: 1rem;
 }
 
-.header-bottom-side-left{
+.container-esquerda {
     height: 100%;
     flex-basis: 50%;
 }
 
-.header-bottom-side-left h2{
-    font-family: Nunito, sans-serif;    
+.container-esquerda h2 {
+    font-family: Nunito, sans-serif;
     font-size: 2rem;
     margin-bottom: 1.5rem;
 }
 
-.header-bottom-side-left p{
-    font-family: Nunito, sans-serif;    
+.container-esquerda p {
+    font-family: Nunito, sans-serif;
     font-size: 1.5rem;
     margin-bottom: 1.5rem;
 }
 
-.header-bottom-side-left button{
-    font-family: Nunito, sans-serif;    
+.container-esquerda button {
+    font-family: Nunito, sans-serif;
     font-size: 1.5rem;
     font-weight: 500;
     background-color: #f0ceb1;
@@ -110,21 +121,89 @@ header{
     cursor: pointer;
     padding: 0.8rem 3.8rem;
     border-radius: 9999px;
+    color: #000000;
 }
 
-.header-bottom-side-left button:hover{
+.container-esquerda button:hover {
     background-color: #ebab73;
     transition: all 0.4s;
 }
 
-.header-bottom-side-right{
+.container-direita {
     flex-basis: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.header-bottom-side-right img{
+.container-direita img {
     width: 115%;
     margin: 0 auto;
+}
+
+.titulo-produtos h2 {
+    font-family: Nunito, sans-serif;
+    font-size: 2.5rem;
+    text-align: center;
+    padding: 3rem;
+    position: relative;
+    line-height: 60px;
+    margin: 0 auto 80px;
+}
+
+.fotos-produtos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+}
+
+.fotos-produtos img {
+    width: 25%;
+    height: auto;
+    max-width: 100%;
+    object-fit: cover;
+
+/* MEDIA QUERIES */
+@media (max-width: 860px) {
+    .logo {
+        font-size: 1.5rem;
+    }
+
+    .container-inferior {
+        flex-direction: column;
+        text-align: center;
+        padding-top: 4rem;
+    }
+
+    /* Menu hamburguer visível em telas pequenas */
+    .icone-menu {
+        display: block;
+        width: 35px;
+        cursor: pointer;
+    }
+
+    nav {
+        display: none;
+        position: absolute;
+        background-color: #a08c7a;
+        width: 100%;
+        top: 48px;
+        left: 0;
+        text-align: center;
+        padding: 1rem 0;
+    }
+
+    .menu-checkbox:checked + .icone-menu + nav {
+        display: block;
+    }
+
+    nav ul {
+        flex-direction: column;
+    }
+
+    nav ul li {
+        text-align: center;
+        padding: 0.8rem;
+    }
 }
