@@ -6,8 +6,10 @@
 
 body {
     font-family: 'arial';
-    background-color:  radial-gradient(#EAD7C5, #B68D40);
+    background-image: radial-gradient(#EAD7C5, #B68D40);
     min-height: 100vh;
+    margin: 0;
+    padding: 0;
 }
 
 .logo {
@@ -71,7 +73,7 @@ nav ul li:hover {
     transition: all 0.5s;
 }
 
-/* Menu hamburguer */
+
 .checkbox-menu {
     display: none;
 }
@@ -83,10 +85,6 @@ nav ul li:hover {
 }
 
 /* ELEMENTOS DO HEADER */
-header {
-    background-image: radial-gradient(#EAD7C5, #B68D40);
-    min-height: 100vh;
-}
 
 .container-inferior {
     display: flex;
@@ -163,6 +161,99 @@ header {
     height: auto;
     max-width: 100%;
     object-fit: cover;
+}
+
+.texto-produtos h2 {
+    font-family: Nunito, sans-serif;
+    font-size: 2.5rem;
+    text-align: center;
+    padding: 3rem;
+    position: relative;
+    line-height: 60px;
+    margin: 0 auto 50px;
+}
+
+.container-produtos {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    justify-content: center;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.card-produto {
+    background-color: #F5E3C7;
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.card-produto img {
+    width: 100%;
+    max-height: 150px;
+    object-fit: contain;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+
+.card-produto h3 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.2rem;
+    color: #8B4513;
+    margin-bottom: 5px;
+}
+
+.card-produto p {
+    font-family: 'Nunito', sans-serif;
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.card-produto button {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    font-weight: bold;
+    background-color: #F4A460;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background-color 0.3s ease-in-out, transform 0.2s ease-in-out;
+}
+
+.botao-comprar {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    background-color: #8B4513;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.preco {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #F4A460;
+}
+
+.card-produto:hover {
+    transform: scale(1.05);
+}
+
 
 /* MEDIA QUERIES */
 @media (max-width: 860px) {
