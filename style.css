@@ -5,12 +5,14 @@
 }
 
 body {
-    font-family: 'arial';
+    font-family: 'Poppins', sans-serif;
     background-image: radial-gradient(#EAD7C5, #B68D40);
     min-height: 100vh;
     margin: 0;
     padding: 0;
 }
+
+/* Navbar */
 
 .logo {
     font-family: 'Fredoka', sans-serif;
@@ -28,13 +30,12 @@ body {
     margin-right: auto;
 }
 
-/* ELEMENTOS DO NAVBAR */
 .navbar {
     background-color: #a08c7a;
     padding: 1rem;
     position: sticky;
     top: 0;
-    z-index: 99;
+    z-index: 1000;
 }
 
 .navbar > div {
@@ -84,7 +85,9 @@ nav ul li:hover {
     cursor: pointer;
 }
 
-/* ELEMENTOS DO HEADER */
+/* Navbar */
+
+/* Header */
 
 .container-inferior {
     display: flex;
@@ -118,7 +121,7 @@ nav ul li:hover {
     border: none;
     cursor: pointer;
     padding: 0.8rem 3.8rem;
-    border-radius: 9999px;
+    border-radius: 1000px;
     color: #000000;
 }
 
@@ -138,6 +141,10 @@ nav ul li:hover {
     width: 115%;
     margin: 0 auto;
 }
+
+/* Header */
+
+/* Produtos */
 
 .titulo-produtos h2 {
     font-family: Nunito, sans-serif;
@@ -226,7 +233,6 @@ nav ul li:hover {
     border-radius: 5px;
     cursor: pointer;
     margin-top: 10px;
-    transition: background-color 0.3s ease-in-out, transform 0.2s ease-in-out;
 }
 
 .botao-comprar {
@@ -241,7 +247,6 @@ nav ul li:hover {
     font-size: 1rem;
     font-weight: bold;
     cursor: pointer;
-    transition: background-color 0.3s ease;
 }
 
 .preco {
@@ -254,24 +259,103 @@ nav ul li:hover {
     transform: scale(1.05);
 }
 
+/* Produtos */
+
+ /* Rodapé */
+
+.rodape {
+    background-color: #7c644f;
+    color: rgb(0, 0, 0);
+    padding: 2rem 0;
+}
+
+.container-rodape {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1300px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+}
+
+.secao-rodape {
+    flex: 1;
+    min-width: 200px;
+    padding: 1rem;
+}
+
+.secao-rodape h3 {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+.secao-rodape ul {
+    list-style: none;
+    padding: 0;
+}
+
+.secao-rodape ul li {
+    margin-bottom: 0.5rem;
+    cursor: pointer;
+}
+
+.secao-rodape ul li:hover {
+    text-decoration: underline;
+}
+
+.texto-pagamentos, .redes-sociais {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+
+.pagamento-redes {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+}
+
+.icones-pagamento,
+.icones-redes {
+    display: flex;
+    gap: 15px;
+    margin-top: 0.5rem;
+}
+
+.icones-pagamento img,
+.icones-redes img {
+    width: 40px;
+    height: auto;
+}
+
+.icones-pagamento img:first-child {
+    width: 60 px;
+    height: auto;
+}
+
+/* Rodapé */
+
 
 /* MEDIA QUERIES */
-@media (max-width: 860px) {
+@media (max-width: 600px) {
     .logo {
-        font-size: 1.5rem;
-    }
-
-    .container-inferior {
-        flex-direction: column;
+        font-size: 1.3rem;
         text-align: center;
-        padding-top: 4rem;
     }
 
-    /* Menu hamburguer visível em telas pequenas */
+    .navbar {
+        padding: 0.8rem;
+    }
+
+    .container-header {
+        padding: 0 1rem;
+    }
+
     .icone-menu {
         display: block;
-        width: 35px;
-        cursor: pointer;
+        width: 30px;
     }
 
     nav {
@@ -279,22 +363,66 @@ nav ul li:hover {
         position: absolute;
         background-color: #a08c7a;
         width: 100%;
-        top: 48px;
+        top: 50px;
         left: 0;
         text-align: center;
         padding: 1rem 0;
     }
 
-    .menu-checkbox:checked + .icone-menu + nav {
+    .checkbox-menu:checked + .icone-menu + nav {
         display: block;
     }
 
     nav ul {
         flex-direction: column;
+        padding: 0;
     }
 
     nav ul li {
-        text-align: center;
         padding: 0.8rem;
+    }
+
+    .container-inferior {
+        flex-direction: column;
+        text-align: center;
+        padding-top: 3rem;
+    }
+
+    .container-esquerda h2 {
+        font-size: 1.8rem;
+    }
+
+    .container-esquerda p {
+        font-size: 1.2rem;
+    }
+
+    .container-direita img {
+        width: 90%;
+    }
+
+    .container-produtos {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .card-produto img {
+        max-height: 120px;
+    }
+
+    .rodape {
+        text-align: center;
+    }
+
+    .container-rodape {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .secao-rodape {
+        width: 100%;
+    }
+
+    .icones-pagamento,
+    .icones-redes {
+        justify-content: center;
     }
 }
