@@ -146,7 +146,7 @@ nav ul li:hover {
 
 /* Produtos */
 
-.titulo-produtos h2 {
+.header-produtos h2 {
     font-family: Nunito, sans-serif;
     font-size: 2.5rem;
     text-align: center;
@@ -154,6 +154,7 @@ nav ul li:hover {
     position: relative;
     line-height: 60px;
     margin: 0 auto 80px;
+    margin-bottom: 2px;
 }
 
 .fotos-produtos {
@@ -171,7 +172,7 @@ nav ul li:hover {
 }
 
 .texto-produtos h2 {
-    font-family: Nunito, sans-serif;
+    font-family: "Poppins", sans-serif;
     font-size: 2.5rem;
     text-align: center;
     padding: 3rem;
@@ -277,28 +278,28 @@ nav ul li:hover {
     flex-wrap: wrap;
 }
 
-.secao-rodape {
+.termos-rodape {
     flex: 1;
     min-width: 200px;
     padding: 1rem;
 }
 
-.secao-rodape h3 {
+.termos-rodape h3 {
     font-size: 1.2rem;
     margin-bottom: 1rem;
 }
 
-.secao-rodape ul {
+.termos-rodape ul {
     list-style: none;
     padding: 0;
 }
 
-.secao-rodape ul li {
+.termos-rodape ul li {
     margin-bottom: 0.5rem;
     cursor: pointer;
 }
 
-.secao-rodape ul li:hover {
+.termos-rodape ul li:hover {
     text-decoration: underline;
 }
 
@@ -417,7 +418,7 @@ nav ul li:hover {
         align-items: center;
     }
 
-    .secao-rodape {
+    .termos-rodape {
         width: 100%;
     }
 
